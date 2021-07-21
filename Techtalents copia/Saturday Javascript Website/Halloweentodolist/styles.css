@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: "Righteous";
+    font-size: 18pt;
+    font-weight: 700;
+    text-shadow: -10px 0 20px rgb(255, 100, 0), 10px 0 20px rgb(255, 100, 0);
+}
+body * {
+    z-index: 1;
+}
+#container * {
+    z-index: 999;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    text-align: center;
+}
+
+input {
+    width: 70%;
+    padding: 5px;
+
+    font-family: inherit;
+    color: inherit;
+
+    background-color: rgba(0, 0, 0, 255);
+    border: 1px solid rgb(255, 100, 0);
+    border-radius: 5px;
+}

@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Tomorrow', sans-serif;
+}
+
+#jokeSetup {
+	grid-area: 2 / 2 / 3 / 3
+}
+
+.animate span{
+	display: block;
+	position: relative;
+	text-align: center;
+}
+
+.animate.backwards > span{
+	animation: animateBackwards 1s ease-in-out 
+forwards;
+}
+.animate.forwards > span{
+	animation: animateForwards 1s ease-in-out 
+forwards;
+}
+
+.animate.mixed > span:nth-child(even){
+	animation: animateBackwards 1s ease-in-out 
+forwards;
+}
+.animate.mixed > span:nth-child(odd){
+	animation: animateForwards 1s ease-in-out 
+forwards;
+}
+
+@keyframes animateForwards {
+	from { top: 0; transform: rotate(0deg); }
+	to { top: .9em; transform: rotate(-15deg); }
+}
+@keyframes animateBackwards {
+	from { top: 0; transform: rotate(0deg); }
+	to { top: 1em; transform: rotate(25deg); }
+}

@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+
+#rectangle {
+    position: relative;
+    background-color: green;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+
+#rectangle:hover {
+    background-color: yellow;
+    transition: background-color;
+    transition-duration: 1s;
+}
+
+#innerrectangle {
+    background-color: white;
+    display: flex;
+    width: 175px;
+    height: 250px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: all 0.25s;
+}
+
+#rectangle > div:active {
+    transform: translateX(175px);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#background-text {
+    position: absolute;
+    width: 175px;
+    height: 250px;
+    right: 25;
+
+    background: magenta;
+}

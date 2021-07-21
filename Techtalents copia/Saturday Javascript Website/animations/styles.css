@@ -1,0 +1,61 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+div#rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 60vh;
+    background-color: red;
+    animation-name: myAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear
+}
+
+h1 {
+    position: absolute;
+    animation-name: movingText;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite
+    
+}
+
+@keyframes myAnimation {
+    from {
+        background-color: red;
+        border-radius: 5px;
+    }
+
+    50% {
+        background-color: gold;
+        border-radius: 200px;
+        transform: rotate3d(200px);
+        font-family: 'Tomorrow', sans-serif;
+        transform: translate3d(100px, 0, 0)
+    }
+
+    to {
+        background-color: blue;
+        border-radius: 400px;
+        font-family: 'Tomorrow', sans-serif;
+    }
+}
+
+@keyframes movingText {
+    from {
+        transform: translate3d(-40vw, -40vh, 0);
+    }
+    to {
+        transform: translate3d(+35vw, +40vh, 0);
+    }
+}

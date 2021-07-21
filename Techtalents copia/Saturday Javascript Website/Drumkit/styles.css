@@ -1,0 +1,91 @@
+html{
+    font-size: 10vh;
+    font-family: monospace;
+}
+
+body {
+    background-image:  url("https://media.guitarcenter.com/is/image/MMGS7/Nitro-Mesh-8-Piece-Electronic-Drum-Set/L21006000000000-00-290x290.jpg");
+    background-position: center bottom;
+    background-size: contain;
+    
+    height:100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#keys {
+    display: flex;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: brown;
+
+    margin: 10px;
+    width: 1.5rem;
+    font-size: 0.55rem;
+
+    border: 4px solid coral;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+
+    transition: transform 0.5s, border-color 0.5s;
+}
+.key > div:last-child{
+    font-size: 0.2rem;
+    color: #ffc500;
+}
+
+.key:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 5px white;
+}
+
+.key:hover > div:first-child{
+    color: orange;
+}
+
+.key.playing {
+    transform: scale(1.2);
+    border-color: yellow;
+}
+
+@keyframes snowflake-fall {
+    from {
+        top: -10%;
+    }
+    to {
+        top: 100vh;
+    }
+}
+
+@keyframes snowflake-sway {
+    from {
+        transform: translateX(-20px);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+    to {
+        transform: translateX(-20px);
+    }
+}
+
+.snowflake {
+    animation-name: snowflake-fall, snowflake-sway;
+    animation-duration: 10s, 2s;
+    animation-iteration-count: infinite, infinite;
+    animation-timing-function: linear, ease-in-out;
+
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: 30px;
+    position: fixed;
+    user-select: none
+}

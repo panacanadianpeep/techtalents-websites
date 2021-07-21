@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sliders.css">
+    <script src = "script.js"></script>
+</head>
+<body>
+    <div id = "player">
+        <video src="https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164 "></video>
+        <div id = "controls">
+            <div id = "progress"></div>
+            <button id = "play">play</button>
+            <input id = "volume" type = "range">
+            <input id = "speed" type = "range">
+            <button class = "skip" data-time="-30">30&lt;</button>
+            <button class = "skip" data-time="-10">10&lt;</button>
+            <button class = "skip" data-time="10">&gt;10</button>
+            <button class = "skip" data-time="30">&gt;30</button>
+        </div>
+    </div>
+</body>
+</html>

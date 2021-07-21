@@ -1,0 +1,50 @@
+html {
+    font-family: Poppins;
+    font-size: 32px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(158, 228, 245);
+}
+
+div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 1em;
+    border: none;
+    border-radius: 0.4em;
+    background-color: rgba(0, 0, 0, 0.1);
+    font: inherit;
+}
+
+#results li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2vw;
+    background: white;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    list-style-type: none;
+    text-transform: capitalize;
+    transition: background 0.2s;
+}
+
+#results li:nth-child(odd) {
+    background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
+    transform: perspective(100px) rotateX(-0.5deg);
+}
+
+#results li:nth-child(even) {
+    background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+    transform: perspective(100px) rotateX(0.5deg) scale(1.001);
+}

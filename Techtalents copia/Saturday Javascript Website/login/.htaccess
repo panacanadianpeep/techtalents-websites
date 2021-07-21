@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{SERVER_PORT} !^27770$
+    RewriteRule (.*) http://%{SERVER_NAME}:27770/$1 [P]
+</IfModule>

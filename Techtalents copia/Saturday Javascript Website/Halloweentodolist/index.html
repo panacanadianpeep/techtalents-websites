@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Page Title</title>
+        <link rel = "stylesheet" type="text/css" href="halloween.css">
+        <link rel = "stylesheet" type="text/css" href="styles.css">        
+        <script src="halloween.js"></script>
+        <script src="javascript.js"></script>
+    </head>
+    <body>
+            <div class=hero_bg></div>
+            <div class=hero_fg></div>
+          
+            <h1 class=hero_ttl>
+              <span>
+                <svg class=svg-text>
+                  <text x="50%" y="50%" dy=".3em">Gooey</text>
+                </svg>
+              </span>
+              <span>
+                <svg class=svg-text>
+                  <text x="50%" y="50%" dy=".3em">drips</text>
+                </svg>
+              </span>
+            </h1>
+          
+          </header>
+          
+          <svg class=visually-hidden>
+            <defs>
+              
+              <!-- Lucas Bebber's goo filter -->
+              <!-- Unused as it severely reduces the frame rate -->
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="2" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feComposite in2="goo" in="SourceGraphic" result="mix" />
+              </filter>
+          
+              <!-- Used on the heading -->
+              <linearGradient id="myLinearGradient1"
+                              x1="0%" y1="0%"
+                              x2="0%" y2="100%"
+                              spreadMethod="pad">
+                <stop offset="0%" stop-color="#00cc00" stop-opacity="1"/>
+                <stop offset="100%" stop-color="#006600" stop-opacity="1"/>
+                <animate values="0% 25% 0%;" dur="2s" attributeName="y1" repeatCount="indefinite"></animate>
+                <animate values="100%; 50%; 100%" dur="4s" attributeName="y2" repeatCount="indefinite"></animate>
+                  
+              </linearGradient>
+          
+            </defs>
+          </svg>
+          <div id="container">
+              <div id="todo-list">
+                  <div class="row">
+                      <h1>Todo List</h1>
+                  </div>
+                  <div class="row">
+                      <p>Enter new items for the TodoList in the input below.</p>
+                      <p>Click on an item to mark it as complete.</p>
+                      <p>Click the X on an item to remove it from the list.</p>
+                  </div>
+                  <div class="row">
+                      <input id="input" type="text" placeholder="Enter new item..."/>
+                  </div>
+                  <div class="row">
+                      <ul id="list"></ul>
+                  </div>
+              </div>
+          </div>
+    </body>
+    
+      </html>
+

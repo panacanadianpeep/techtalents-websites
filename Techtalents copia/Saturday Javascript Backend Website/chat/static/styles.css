@@ -1,0 +1,47 @@
+* {
+    font-family: Poppins, sans-serif;
+    font-size: 14pt;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(20, 187, 34);
+    background-image: linear-gradient(90deg, rgb(0, 255, 42), green);
+}
+
+#container {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+#messages {
+    flex: 9;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#input {
+    flex: 1;
+}
+
+button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#username {
+    order: 999
+}
